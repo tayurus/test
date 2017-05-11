@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<!-- Подключение скриптов -->
+	<script type="text/javascript" src="jquery-3.2.0.min.js"></script>
+	<script type="text/javascript" src="code.js"></script>
+	<style>
+		#field td {
+			width: 15px;
+			height: 15px;
+		}
+
+		#inputTable {
+			border: 1px solid #ccc;
+		}
+
+		#dangersPos input {
+			width: 25px;
+		}
+
+		#dangersPos td {
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>
+			Исходные данные
+		</h2>
+	<hr>
+	<table id="inputTable" border="1">
+		<tr>
+			<td>Режим работы программы</td>
+			<td><input type="radio" value="save" name="mode">Безопасный <input type="radio" value="quick"  checked name="mode">Быстрый</td>
+		</tr>
+		<tr>
+			<td>Кол-во строк на поле = </td>
+			<td><input id="rowCount" type="number" value=15 min=0 max=100></td>
+		</tr>
+		<tr>
+			<td>Кол-во столбцов на поле = </td>
+			<td><input id="colCount" type="number" value=15 min=0 max=100></td>
+		</tr>
+		<tr>
+			<td>Номер строки т.А = </td>
+			<td><input id="Arow" type="number" min=0 value = 0 max=100></td>
+			<td>Номер столбца т.А = </td>
+			<td><input id="Acol" type="number"  value = 0 min=0 max=100></td>
+		</tr>
+
+		<tr>
+			<td>Номер строки т.B = </td>
+			<td><input id="Brow" type="number" min=0  value = 1 max=100></td>
+			<td>Номер столбца т.B = </td>
+			<td><input id="Bcol" type="number" min=0  value = 1 max=100></td>
+		</tr>
+
+
+
+		<tr>
+			<td> Н = </td>
+			<td><input id="H" type="number" value=0 min=0 max=100></td>
+		</tr>
+
+		<tr>
+			<td> q = </td>
+			<td><input id="q" type="number" value=0 min=0 max=100></td>
+		</tr>
+
+		<tr>
+			<td> D = </td>
+			<td><input id="D" type="number" value=0 min=0 max=100></td>
+		</tr>
+
+		<tr>
+			<td> V0 = </td>
+			<td><input id="V0" type="number" value=0 min=0 max=100></td>
+		</tr>
+
+	</table>
+
+	<button id="applyInput">Нарисовать поле и произвести рассчеты!</button>
+	<div id="results">
+		<div> Результаты рассчетов</div>
+		<table border="1">
+			<tr>
+				<td>P1 = </td>
+				<td id="P1"></td>
+			</tr>
+
+			<tr>
+				<td>P2 = </td>
+				<td id="P2"></td>
+			</tr>
+			<tr>
+				<td>f = </td>
+				<td><img id="fImage"></td>
+				<td id="f"></td>
+			</tr>
+			<!-- <tr>
+				<td>Vпр = </td>
+				<td id="Vpr"></td>
+			</tr> -->
+		</table>
+
+		<table id="field" border="1" bordercolor="black">
+
+		</table>
+	</div>
+</body>
+
+</html>
